@@ -1,5 +1,5 @@
 {
-  "originHash" : "75a28c180eaa852896a1e043cbbf340d2f28af3ec620072b1a1b7d9a6041d14e",
+  "originHash" : "d580a3d06f13e658e12805c88e13539a5f19d3337a2035fd26846a52fe94662f",
   "pins" : [
     {
       "identity" : "swift-docc-plugin",
@@ -20,29 +20,11 @@
       }
     },
     {
-      "identity" : "swift-macro-testing",
+      "identity" : "swift-syntax-xcframeworks",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/pointfreeco/swift-macro-testing",
+      "location" : "https://github.com/sjavora/swift-syntax-xcframeworks",
       "state" : {
-        "revision" : "20c1a8f3b624fb5d1503eadcaa84743050c350f4",
-        "version" : "0.5.2"
-      }
-    },
-    {
-      "identity" : "swift-snapshot-testing",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/pointfreeco/swift-snapshot-testing",
-      "state" : {
-        "revision" : "42a086182681cf661f5c47c9b7dc3931de18c6d7",
-        "version" : "1.17.6"
-      }
-    },
-    {
-      "identity" : "swift-syntax",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/swiftlang/swift-syntax",
-      "state" : {
-        "revision" : "0687f71944021d616d34d922343dcef086855920",
+        "revision" : "9ee39cc55ade054ed2ec0c6a082476e6d4f074bd",
         "version" : "600.0.1"
       }
     },

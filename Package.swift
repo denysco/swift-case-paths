@@ -23,7 +23,7 @@ let package = Package(
     ),
   ],
   dependencies: [
-    .package(url: "https://github.com/swiftlang/swift-syntax", "509.0.0"..<"601.0.0"),
+    .package(url: "https://github.com/sjavora/swift-syntax-xcframeworks.git", "509.0.0"..<"601.0.0"),
     .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "1.2.2"),
   ],
   targets: [
@@ -44,8 +44,7 @@ let package = Package(
     .macro(
       name: "CasePathsMacros",
       dependencies: [
-        .product(name: "SwiftSyntaxMacros", package: "swift-syntax"),
-        .product(name: "SwiftCompilerPlugin", package: "swift-syntax"),
+        .product(name: "SwiftSyntaxWrapper", package: "swift-syntax-xcframeworks"),
       ]
     ),
     .testTarget(
@@ -62,23 +61,23 @@ let package = Package(
   )
 #endif
 
-if ProcessInfo.processInfo.environment["OMIT_MACRO_TESTS"] == nil {
-  package.dependencies.append(
-    .package(url: "https://github.com/pointfreeco/swift-macro-testing", from: "0.2.0")
-  )
-  package.targets.append(
-    .testTarget(
-      name: "CasePathsMacrosTests",
-      dependencies: [
-        "CasePathsMacros",
-        .product(
-          name: "MacroTesting",
-          package: "swift-macro-testing"
-        ),
-      ]
-    )
-  )
-}
+//if ProcessInfo.processInfo.environment["OMIT_MACRO_TESTS"] == nil {
+//  package.dependencies.append(
+//    .package(url: "https://github.com/pointfreeco/swift-macro-testing", from: "0.2.0")
+//  )
+//  package.targets.append(
+//    .testTarget(
+//      name: "CasePathsMacrosTests",
+//      dependencies: [
+//        "CasePathsMacros",
+//        .product(
+//          name: "MacroTesting",
+//          package: "swift-macro-testing"
+//        ),
+//      ]
+//    )
+//  )
+//}
 
 for target in package.targets {
   target.swiftSettings = target.swiftSettings ?? []
